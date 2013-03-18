@@ -3,7 +3,8 @@ File-Canonicalizer
 Sometimes files must be compared semantically, that is their contents,
 not their forms are to be compared.
 Sometimes files must be unified and cleaned from any cosmetic additions.
-Sometimes character of file changes (contents or form) must be recognized.
+Sometimes a kind of file changes (contents or form) must be recognized.
+This module might be useful for such tasks.
 
 The module File::Canonicalizer works with ASCII files and allows to converse
 files to a canonicalized form.

@@ -9,7 +9,7 @@ our @ISA = qw(Exporter);
 our @EXPORT = qw(file_canonicalizer);
 
 use Carp;
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 sub file_canonicalizer {
    my ( $inp_file                                       # 1
@@ -71,7 +71,7 @@ File::Canonicalizer - ASCII file canonicalizer
 
    use File::Canonicalizer;
 
-   file_canonicalizer ('input_file','canonical_output_file', '',3,4,5,6,7,8,9,10);
+   file_canonicalizer ('input_file','canonical_output_file', '',4,5,6,7,8,9,10);
 
 =head1 DESCRIPTION
 
@@ -116,19 +116,19 @@ they can be compared with each other.
 
    file_canonicalizer ( <input_file>                                   # 1 default is STDIN
                       , <output_file>                                  # 2 default is STDOUT 
-                      , remove_comments_started_with_<regular_expres>  # 3 if empty, ignore comments
+                      , remove_comments_started_with_<regular_express> # 3 if empty, ignore comments
                       , 'replace_adjacent_tabs_and_spaces_with_1_space'# 4
                       , 'replace_adjacent_slashes_with_single_slash'   # 5
                       , 'remove_white_char_from_line_edges'            # 6
                       , 'remove_empty_lines'                           # 7
-                      , 'convert_to_lowercased'                        # 8
+                      , 'convert_to_lower_cased'                       # 8
                       , 'remove_leading_zeroes_in_numbers'             # 9
                       , 'sort_lines'                                   #10
                       , <replaced_substring>                           #11
                       , <replacing_substring>                          #12
    );
 
-All parameters, beginning with the 3rd, are interpreted as boolean values
+All parameters, beginning with the 3rd, are interpreted as Boolean values
 true or false. A corresponding action will be executed only if its parameter value is true.
 This means, that each of literals between apostrophes '' can be shortened to
 single arbitrary character or digit 1-9.
@@ -148,12 +148,12 @@ Create canonicalized cron table (on UNIX/Linux) in any of equivalent examples:
    file_canonicalizer('path/cron_table','/tmp/cron_table.canonic','#',4,5, 6,    7,       '',9, 10);
    file_canonicalizer('path/cron_table','/tmp/cron_table.canonic','#',1,1, 1,    1,       '',1, 1);
 
-Canonicalization of file 'file_A' and 'file_B':
+Canonicalization of files 'file_A' and 'file_B', shown in sesction "DESCRIPTION":
 
-   file_canonicalizer('file_A','file_A.c','#',1,5,1,1,1,1,10,'\-',':');
-   file_canonicalizer('file_B','file_B.c','#',1,5,1,1,1,1,10);
+   file_canonicalizer('file_A','file_A.canonic','#',1,5,1,1,1,1,10,'\-',':');
+   file_canonicalizer('file_B','file_B.canonic','#',1,5,1,1,1,1,10);
 
-creates two identical files 'file_A.c' and 'file_B.c':
+creates two identical files 'file_A.canonic' and 'file_B.canonic':
 
    birth date : 1961/8/4
    first name : barack

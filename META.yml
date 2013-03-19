@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               File-Canonicalizer
-version:            0.02
+version:            0.10
 abstract:           ASCII file canonicalizer
 author:
     - Mart E. Rivilis <rivilism@cpan.org>

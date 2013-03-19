@@ -1,7 +1,10 @@
 Revision history for File-Canonicalizer
 
-0.01    Date/time
+0.01    2013/time
         First version, released on an unsuspecting world.
 
-0.02    Date/time
-        Documentation enhancements
+0.02    2013/time
+        Documentation enhancements.
+
+0.10    2013/time
+        Replaced last pair of parameters with array reference.

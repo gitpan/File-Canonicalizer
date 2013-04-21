@@ -15,11 +15,11 @@ of files.
                       , remove_comments_started_with_<regular_express> # if empty, ignore comments
                       , 'replace_adjacent_tabs_and_spaces_with_1_space'
                       , 'replace_adjacent_slashes_with_single_slash'
-                      , 'remove_white_char_from_line_edges'
+                      , 'remove_white_characters_from_line_edges'
                       , 'remove_empty_lines'
                       , 'convert_to_lowercased'
                       , 'remove_leading_zeroes_in_numbers'
-                      , 'sort_lines'
+                      , 'sort_lines_lexically'
                       , <replaced_substring>
                       , <replacing_substring> );
 

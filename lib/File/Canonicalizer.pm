@@ -10,7 +10,7 @@ our @ISA = qw(Exporter);
 our @EXPORT = qw(file_canonicalizer);
 
 use Carp;
-our $VERSION = '0.10';
+our $VERSION = '0.11';
 
 sub file_canonicalizer {
    my ( $inp_file                                       # 1
@@ -96,11 +96,11 @@ File::Canonicalizer - ASCII file canonicalizer
 
 Sometimes files must be compared semantically, that is their contents, not their forms
 are to be compared.
-The following two files have different forms, but contain identical information:
+Following two files have different forms, but contain identical information:
 
 file_A
 
-   First name -        Barack   # and Hussein
+   First name -        Barack
 
    Last name  -        Obama
 
@@ -149,11 +149,11 @@ they can be compared with each other.
                       , remove_comments_started_with_<regular_express> # 3 if empty, ignore comments
                       , 'replace_adjacent_tabs_and_spaces_with_1_space'# 4
                       , 'replace_adjacent_slashes_with_single_slash'   # 5
-                      , 'remove_white_char_from_line_edges'            # 6
+                      , 'remove_white_characters_from_line_edges'      # 6
                       , 'remove_empty_lines'                           # 7
                       , 'convert_to_lower_cased'                       # 8
                       , 'remove_leading_zeroes_in_numbers'             # 9
-                      , 'sort_lines'                                   #10
+                      , 'sort_lines_lexically'                         #10
                       , array_reference_to_pairs_replaced_replacement  #11
    );
 
